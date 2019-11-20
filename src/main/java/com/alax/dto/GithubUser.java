@@ -1,4 +1,4 @@
-package com.alax.domain;
+package com.alax.dto;
 
 /**
  * author: drew

@@ -1,7 +1,7 @@
 package com.alax.provider;
 
-import com.alax.domain.AccessTokenDTO;
-import com.alax.domain.GithubUser;
+import com.alax.dto.AccessTokenDTO;
+import com.alax.dto.GithubUser;
 import com.alibaba.fastjson.JSON;
 import okhttp3.*;
 import org.springframework.stereotype.Component;
