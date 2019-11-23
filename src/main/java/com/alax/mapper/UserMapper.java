@@ -14,8 +14,8 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface UserMapper {
 
-   @Insert("insert into user(name,account_id,token,gmtCreate,gmtModified,avatarUrl) values(#{name},#{account_id},#{token},#{gmtCreate},#{gmtModified},#{avatarUrl})")
-     void insertUser(User user) throws Exception ;
+    @Insert("insert into user (name,account_id,token,gmtCreate,gmtModified,avatar_url) values (#{name},#{accountId},#{token},#{gmtCreate},#{gmtModified},#{avatarUrl})")
+    void insertUser(User user) ;
 
    @Select("select * from user where token=#{token}")
    /*参数不是类的加@Param*/
