@@ -1,16 +1,13 @@
-package com.alax.model;
+package com.alax.dto;
 
-
-    import lombok.Data;
+import com.alax.model.User;
+import lombok.Data;
 
 /**
- * author: drew
- * date:2019/11/21
- * time:19:02
+ *传输层
  */
-//发布功能
 @Data
-public class Question {
+public class QuestionDTO {
     private Integer id;
     private String title;
     private String description;
@@ -21,5 +18,5 @@ public class Question {
     private Integer viewCount;
     private Integer commentCount;
     private Integer likeCount;
-
+    private User user;
 }
