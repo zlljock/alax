@@ -42,6 +42,15 @@
             <version>2.1.1</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>provided</scope>
+        </dependency>
+
+
         <!--post和get请求-->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
@@ -84,6 +93,26 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>6.0.8</version>
+                <!--和配置文件的url user password一样-->
+                <configuration>
+                    <url>jdbc:h2:~/drew</url>
+                    <user>drew</user>
+                    <password>123456</password>
+                </configuration>
+
+                <dependencies>
+                    <dependency>
+                        <groupId>com.h2database</groupId>
+                        <artifactId>h2</artifactId>
+                        <version>1.4.199</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
